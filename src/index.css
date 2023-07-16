@@ -160,9 +160,10 @@ main .item{
   padding-bottom: 20px;
 }
 main .item img {
-width: 100%;
+  width: 100%;
   border-radius: 10px 10px;
   transition: transform 500ms ease;
+  cursor: pointer;
 }
 main .item img:hover {
   transform: scale(1.05);
