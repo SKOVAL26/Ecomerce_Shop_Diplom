@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
-
+import Item from "./item";
 export class ShowFullItem extends Component{
     render () {
         return (
-            <div>ShowFullComponent</div>
+            <div className = 'full-item'>
+                <img src={"./img/"+this.props.item.img} alt={this.props.item.title} onClick={() => this.props.onShowItem(this.props.item)}/>
+                <h2>{this.props.item.title}</h2>
+                <p>{this.props.item.desc}</p>
+                <b>{this.props.item.price}USD</b>
+                <div className = 'add-to-cart' onClick={()=>this.props.onAdd(this.props.item)}>
+                    +
+                </div>
+            </div>
         )
     }
 }
